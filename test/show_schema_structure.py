@@ -73,7 +73,7 @@ def show_schema_structure(cur, schema):
         else:
             print("  (немає)")
 def main():
-    conn = psycopg2.connect("postgresql://kondiki:avrora@localhost:5432/base_bot")
+    conn = psycopg2.connect("postgresql://kondiki:avrora@localhost:5432/Refridex_os_bot")
     cur = conn.cursor()
 
     cur.execute("""

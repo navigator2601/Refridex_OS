@@ -1,86 +1,164 @@
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.365] 🔹 Стан: utils.logger • Логування налаштовано.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.372] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
-[Refridex OS • DEBUG • 2026-02-05 01:01:31.373] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.374] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.374] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.432] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.435] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.435] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.435] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.436] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.436] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.436] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.437] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.437] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.437] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.438] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.438] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.438] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.438] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.438] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.452] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.452] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.453] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.453] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.453] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.454] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.454] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.972] 🔹 Стан: database.db_pool_manager • Пул з'єднань до бази даних створено успішно.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.973] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.973] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.981] 🔹 Стан: database.db_pool_manager • Таблиця 'users' перевірена/створена.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.982] 🔹 Стан: database.db_pool_manager • Таблиця 'telethon_sessions' перевірена/створена.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.993] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.993] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.993] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:31.994] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
-[Refridex OS • DEBUG • 2026-02-05 01:01:31.994] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:32.593] 🔹 Стан: telegram_client_module.telethon_client • Клієнт Telethon для 380997751324 (@Molfar2207) успішно завантажено та підключено.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:32.594] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 1 активних Telethon клієнтів.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:32.594] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:32.594] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
-[Refridex OS • LOGCORE • 2026-02-05 01:01:32.595] 🔹 Стан: __main__ • Завершення on_startup.
-[Refridex OS • DEBUG • 2026-02-05 01:01:50.588] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
-[Refridex OS • DEBUG • 2026-02-05 01:01:50.588] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
-[Refridex OS • DEBUG • 2026-02-05 01:01:50.589] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
-[Refridex OS • DEBUG • 2026-02-05 01:01:50.589] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
-[Refridex OS • DEBUG • 2026-02-05 01:01:50.589] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.589] 🔹 Стан: handlers.start_handler • Користувач Віталій (ID: 525974549) виконав команду /start.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.646] 🔹 Стан: database.users_db • Оновлено last_activity для користувача 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.648] 🔹 Стан: handlers.start_handler • Оновлено last_activity для існуючого користувача 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.882] 🔹 Стан: handlers.start_handler • Відправлено привітальне повідомлення з Fullscreen Web App кнопкою користувачу 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.882] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) викликав show_main_menu_handler (дія: /start).
-[Refridex OS • LOGCORE • 2026-02-05 01:01:50.884] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) має рівень доступу: 10.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:51.004] 🔹 Стан: handlers.start_handler • Відображено головне меню для користувача 525974549.
-[Refridex OS • DEBUG • 2026-02-05 01:01:53.662] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
-[Refridex OS • DEBUG • 2026-02-05 01:01:53.662] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
-[Refridex OS • DEBUG • 2026-02-05 01:01:53.663] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
-[Refridex OS • DEBUG • 2026-02-05 01:01:53.663] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
-[Refridex OS • DEBUG • 2026-02-05 01:01:53.663] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:53.665] 🔹 Стан: handlers.catalog_handler • Користувач Віталій Дзюба (ID: 525974549) натиснув кнопку '📚 Каталог'.
-[Refridex OS • LOGCORE • 2026-02-05 01:01:53.857] 🔹 Стан: handlers.catalog_handler • Видалено тимчасове повідомлення для приховування клавіатури.
-[Refridex OS • DEBUG • 2026-02-05 01:02:00.082] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:00.083] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
-[Refridex OS • DEBUG • 2026-02-05 01:02:00.083] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
-[Refridex OS • DEBUG • 2026-02-05 01:02:00.083] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:00.083] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.083] 🔹 Стан: handlers.start_handler • Користувач Віталій (ID: 525974549) виконав команду /start.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.094] 🔹 Стан: database.users_db • Оновлено last_activity для користувача 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.095] 🔹 Стан: handlers.start_handler • Оновлено last_activity для існуючого користувача 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.185] 🔹 Стан: handlers.start_handler • Відправлено привітальне повідомлення з Fullscreen Web App кнопкою користувачу 525974549.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.186] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) викликав show_main_menu_handler (дія: /start).
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.191] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) має рівень доступу: 10.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:00.289] 🔹 Стан: handlers.start_handler • Відображено головне меню для користувача 525974549.
-[Refridex OS • DEBUG • 2026-02-05 01:02:05.180] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:05.180] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
-[Refridex OS • DEBUG • 2026-02-05 01:02:05.180] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
-[Refridex OS • DEBUG • 2026-02-05 01:02:05.181] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:05.181] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:05.187] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) викликав show_main_menu_handler (дія: ➡️ Іще).
-[Refridex OS • LOGCORE • 2026-02-05 01:02:05.193] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) має рівень доступу: 10.
-[Refridex OS • DEBUG • 2026-02-05 01:02:06.491] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:06.491] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
-[Refridex OS • DEBUG • 2026-02-05 01:02:06.492] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
-[Refridex OS • DEBUG • 2026-02-05 01:02:06.492] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
-[Refridex OS • DEBUG • 2026-02-05 01:02:06.492] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
-[Refridex OS • LOGCORE • 2026-02-05 01:02:06.503] 🔹 Стан: handlers.echo_handler • Отримано некомандне повідомлення від Віталій Дзюба (ID: 525974549): 🅰️ Пошук магазинів
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.596] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.603] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-03-16 13:36:14.603] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.604] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.604] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.659] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.661] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.662] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.662] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.662] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.662] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.663] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.663] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.663] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.663] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.663] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.664] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.664] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.664] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.664] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.677] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.678] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.678] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.678] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.679] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.680] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:14.680] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.257] 🔹 Стан: database.db_pool_manager • Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.258] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.259] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.267] 🔹 Стан: database.db_pool_manager • Таблиця 'users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.268] 🔹 Стан: database.db_pool_manager • Таблиця 'telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.277] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.277] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.277] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:15.278] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-03-16 13:36:15.278] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:16.007] 🔹 Стан: telegram_client_module.telethon_client • Клієнт Telethon для 380997751324 (@Molfar2207) успішно завантажено та підключено.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:16.007] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 1 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:16.008] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:16.008] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-03-16 13:36:16.009] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • DEBUG • 2026-03-16 13:36:28.016] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-03-16 13:36:28.016] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-03-16 13:36:28.017] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-03-16 13:36:28.017] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-03-16 13:36:28.017] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.020] 🔹 Стан: handlers.start_handler • Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.078] 🔹 Стан: database.users_db • Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.079] 🔹 Стан: handlers.start_handler • Оновлено last_activity для існуючого користувача 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.326] 🔹 Стан: handlers.start_handler • Відправлено привітальне повідомлення з Fullscreen Web App кнопкою користувачу 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.327] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) викликав show_main_menu_handler (дія: /start).
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.331] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) має рівень доступу: 10.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:28.446] 🔹 Стан: handlers.start_handler • Відображено головне меню для користувача 525974549.
+[Refridex OS • DEBUG • 2026-03-16 13:36:59.885] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-03-16 13:36:59.885] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-03-16 13:36:59.885] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-03-16 13:36:59.885] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-03-16 13:36:59.885] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-03-16 13:36:59.906] 🔹 Стан: handlers.catalog_handler • Користувач Віталій Дзюба (ID: 525974549) натиснув кнопку '📚 Каталог'.
+[Refridex OS • LOGCORE • 2026-03-16 13:37:00.292] 🔹 Стан: handlers.catalog_handler • Видалено тимчасове повідомлення для приховування клавіатури.
+[Refridex OS • DEBUG • 2026-03-16 13:39:18.555] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:18.555] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-03-16 13:39:18.555] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-03-16 13:39:18.555] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:18.555] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.556] 🔹 Стан: handlers.start_handler • Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.559] 🔹 Стан: database.users_db • Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.560] 🔹 Стан: handlers.start_handler • Оновлено last_activity для існуючого користувача 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.752] 🔹 Стан: handlers.start_handler • Відправлено привітальне повідомлення з Fullscreen Web App кнопкою користувачу 525974549.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.753] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) викликав show_main_menu_handler (дія: /start).
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.754] 🔹 Стан: handlers.menu_handler • Користувач Віталій Дзюба (ID: 525974549) має рівень доступу: 10.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:18.855] 🔹 Стан: handlers.start_handler • Відображено головне меню для користувача 525974549.
+[Refridex OS • DEBUG • 2026-03-16 13:39:20.368] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:20.368] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-03-16 13:39:20.368] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-03-16 13:39:20.368] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:20.368] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:20.373] 🔹 Стан: handlers.catalog_handler • Користувач Віталій Дзюба (ID: 525974549) натиснув кнопку '📚 Каталог'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:20.537] 🔹 Стан: handlers.catalog_handler • Видалено тимчасове повідомлення для приховування клавіатури.
+[Refridex OS • УВАГА • 2026-03-16 13:39:36.173] ⚠️ Попередження: aiogram.dispatcher • Received SIGINT signal
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.174] 🔹 Стан: __main__ • Початок завершення роботи бота. Зареєстровані shutdown-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.175] 🔹 Стан: __main__ • Спроба відключити Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.175] 🔹 Стан: telegram_client_module.telethon_client • Початок відключення всіх Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.176] 🔹 Стан: telegram_client_module.telethon_client • Telethon клієнт для 380997751324 відключено.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.176] 🔹 Стан: telegram_client_module.telethon_client • Усі Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.177] 🔹 Стан: __main__ • Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.177] 🔹 Стан: __main__ • Спроба закрити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.182] 🔹 Стан: database.db_pool_manager • Пул з'єднань до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.183] 🔹 Стан: __main__ • Пул підключень до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.184] 🔹 Стан: __main__ • Закриття сесію бота.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.437] 🔹 Стан: __main__ • Сесію бота закрито.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.437] 🔹 Стан: __main__ • dp.start_polling завершив роботу.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:36.439] 🔹 Стан: __main__ • Система: процес завершено. Вихід з потоку.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.760] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.762] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-03-16 13:39:43.763] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.763] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.763] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.828] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.831] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.831] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.832] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.832] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.833] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.833] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.833] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.834] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.834] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.834] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.835] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.835] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.835] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.836] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.852] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.853] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.853] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.853] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.854] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.855] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:43.856] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.384] 🔹 Стан: database.db_pool_manager • Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.385] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.386] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.426] 🔹 Стан: database.db_pool_manager • Таблиця 'users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.433] 🔹 Стан: database.db_pool_manager • Таблиця 'telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.438] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.439] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.439] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.439] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-03-16 13:39:44.439] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.441] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.442] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.442] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-03-16 13:39:44.443] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • DEBUG • 2026-03-16 13:39:48.604] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:48.604] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-03-16 13:39:48.604] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-03-16 13:39:48.604] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-03-16 13:39:48.604] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-03-16 13:39:48.605] 🔹 Стан: handlers.start_handler • Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • ПОМИЛКА • 2026-03-16 13:39:48.609] ❌ Помилка: handlers.start_handler • Помилка обробки команди /start для користувача 525974549: стовпець "registered_at" зв'язку "users" не існує
+Traceback (most recent call last):
+  File "/home/kondiki/Refridex/handlers/start_handler.py", line 59, in command_start_handler
+    await users_db.add_user(db_pool, user_id, user_username, user_first_name, user_last_name)
+  File "/home/kondiki/Refridex/database/users_db.py", line 25, in add_user
+    await conn.execute(
+  File "/home/kondiki/Refridex/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 352, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/kondiki/Refridex/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 1864, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kondiki/Refridex/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 1961, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kondiki/Refridex/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 2004, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kondiki/Refridex/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: стовпець "registered_at" зв'язку "users" не існує
