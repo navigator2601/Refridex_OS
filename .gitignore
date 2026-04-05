@@ -4,9 +4,11 @@
 # Ignore virtual environments
 myenv/
 venv/
-logs/
+logs/bot.log
+logs/last_login.log
 .git
 Google_Drive_API.json
 kondiki_reader.session
 create_dump.sh
 pushit.sh
+
