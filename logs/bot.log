@@ -291,3 +291,649 @@
 [Refridex OS • LOGCORE • 2026-04-05 16:16:54.768] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
 [Refridex OS • LOGCORE • 2026-04-05 16:16:54.768] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
 [Refridex OS • LOGCORE • 2026-04-05 16:16:54.768] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.340] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.340] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:49:00.341] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.341] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.341] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.357] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.359] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.359] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.360] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.361] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.361] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.361] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.361] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.362] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.362] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.378] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.378] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.378] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.378] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.378] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.380] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.380] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.913] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.914] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.914] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.916] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.916] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.917] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.920] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.924] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.927] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.929] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.932] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.935] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.937] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.939] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.939] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.939] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.939] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.940] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:49:00.940] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.942] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.942] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.942] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:00.942] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.954] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.954] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:49:52.954] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.955] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.955] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.978] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.980] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.980] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.981] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.981] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.981] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.981] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.981] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.982] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.982] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.982] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.983] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.983] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.983] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.983] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.988] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.989] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.989] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.989] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.990] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.991] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:52.991] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.565] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.565] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.565] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.567] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.568] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.569] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.573] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.577] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.580] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.582] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.585] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.588] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.590] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.592] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.592] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.592] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.592] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.592] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:49:53.593] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.595] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.595] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.595] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:49:53.595] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:49:54.022] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:49:54.023] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:49:58.127] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:49:58.128] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:49:59.253] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:49:59.254] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.192727 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:03.546] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:03.547] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.303062 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:04.978] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:04.979] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.611929 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:09.894] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:09.894] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.677572 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:11.740] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:11.740] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.300148 seconds and try again... (tryings = 3, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:17.165] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:17.166] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.269685 seconds and try again... (tryings = 3, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:19.623] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:19.623] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.935996 seconds and try again... (tryings = 4, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:22.697] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:22.697] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.891344 seconds and try again... (tryings = 4, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:25.766] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:25.767] ⚠️ Попередження: aiogram.dispatcher • Sleep for 3.855578 seconds and try again... (tryings = 5, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:29.863] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:29.864] ⚠️ Попередження: aiogram.dispatcher • Sleep for 3.597632 seconds and try again... (tryings = 5, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:33.549] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:33.550] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.138143 seconds and try again... (tryings = 6, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:38.772] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:38.773] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.673882 seconds and try again... (tryings = 6, bot id = 8157903938)
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.025] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.026] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:50:39.026] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.027] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.027] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.056] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.058] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.058] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.058] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.059] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.059] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.059] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.059] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.059] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.060] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.060] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.060] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.060] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.061] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.061] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.066] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.067] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.067] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.067] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.068] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.069] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.070] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.736] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.737] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.737] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.739] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.740] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.741] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.744] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.748] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.751] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.753] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.756] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.759] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.762] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.763] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.763] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.764] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.764] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.764] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:50:39.764] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.767] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.767] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.768] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:50:39.768] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:43.453] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:43.454] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.024857 seconds and try again... (tryings = 7, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:43.594] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:43.594] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:47.681] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:47.681] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.066090 seconds and try again... (tryings = 7, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:48.602] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:48.602] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.176739 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:52.904] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:52.904] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:52.905] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.124771 seconds and try again... (tryings = 8, bot id = 8157903938)
+[Refridex OS • УВАГА • 2026-04-05 16:50:52.905] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.539879 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:57.613] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:57.614] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.061637 seconds and try again... (tryings = 8, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:50:58.126] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:50:58.127] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.913373 seconds and try again... (tryings = 3, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:02.838] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:02.838] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.606382 seconds and try again... (tryings = 4, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:03.143] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:03.144] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.955707 seconds and try again... (tryings = 9, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:08.161] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:08.161] ⚠️ Попередження: aiogram.dispatcher • Sleep for 3.329897 seconds and try again... (tryings = 5, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:08.503] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:08.503] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.042801 seconds and try again... (tryings = 9, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:11.643] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:11.644] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.077375 seconds and try again... (tryings = 10, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:16.662] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:16.662] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.237577 seconds and try again... (tryings = 6, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:16.866] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:16.867] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.939832 seconds and try again... (tryings = 10, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:21.064] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:21.065] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.988609 seconds and try again... (tryings = 11, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:24.870] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:24.870] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.041201 seconds and try again... (tryings = 7, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:26.187] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:26.188] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.134661 seconds and try again... (tryings = 11, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:29.988] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:29.988] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.983666 seconds and try again... (tryings = 12, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:34.380] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:34.380] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.069283 seconds and try again... (tryings = 8, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:35.196] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:35.197] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.005813 seconds and try again... (tryings = 12, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:39.518] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:39.518] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.057813 seconds and try again... (tryings = 13, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:43.264] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:43.264] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.942695 seconds and try again... (tryings = 9, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:44.635] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:44.636] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.004456 seconds and try again... (tryings = 13, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:48.306] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:48.308] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.920831 seconds and try again... (tryings = 14, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:52.707] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:52.707] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.922419 seconds and try again... (tryings = 10, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:53.322] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:53.323] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.987657 seconds and try again... (tryings = 14, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:51:57.728] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:51:57.728] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.194743 seconds and try again... (tryings = 15, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:01.513] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:01.513] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.144496 seconds and try again... (tryings = 11, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:03.051] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:03.052] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.822719 seconds and try again... (tryings = 15, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:06.747] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:06.747] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.866743 seconds and try again... (tryings = 16, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:11.038] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:11.038] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.164380 seconds and try again... (tryings = 12, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:11.856] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:11.857] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.126449 seconds and try again... (tryings = 16, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:16.361] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:16.362] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.015283 seconds and try again... (tryings = 17, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:20.044] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:20.044] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.860882 seconds and try again... (tryings = 13, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:21.484] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:21.485] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.931220 seconds and try again... (tryings = 17, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:25.068] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:25.069] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.082223 seconds and try again... (tryings = 18, bot id = 8157903938)
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.507] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.509] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:52:29.510] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.510] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.511] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.568] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.571] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.571] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.572] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.572] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.573] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.573] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.573] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:29.573] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:29.574] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.078807 seconds and try again... (tryings = 14, bot id = 8157903938)
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.574] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.574] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.575] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.575] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.575] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.576] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.576] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.581] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.582] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.583] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.583] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.584] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.585] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:29.585] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:30.290] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:30.290] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.939635 seconds and try again... (tryings = 18, bot id = 8157903938)
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.310] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.311] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.312] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.314] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.315] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.316] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.320] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.326] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.331] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.334] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.336] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.339] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.342] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.344] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.344] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.345] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.345] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.345] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:52:30.346] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.348] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.349] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.349] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:52:30.350] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:34.818] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:34.818] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:35.717] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:35.717] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.097121 seconds and try again... (tryings = 19, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:38.377] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:38.378] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.126281 seconds and try again... (tryings = 15, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:38.995] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:38.995] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.951542 seconds and try again... (tryings = 19, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:40.941] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:40.942] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.430941 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:44.116] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:44.117] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.204987 seconds and try again... (tryings = 16, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:45.547] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:45.548] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.070219 seconds and try again... (tryings = 20, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:46.673] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:46.674] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.088276 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:48.926] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:48.927] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.887947 seconds and try again... (tryings = 20, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:52.407] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:52.407] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.649884 seconds and try again... (tryings = 3, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:53.738] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:53.738] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.021790 seconds and try again... (tryings = 17, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:53.947] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:53.947] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.839894 seconds and try again... (tryings = 21, bot id = 8157903938)
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.279] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.279] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.280] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.280] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.280] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.282] 🔹 Стан: handlers.start_handler • 👤 Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.288] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.289] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.289] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.289] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-04-05 16:52:55.289] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.290] 🔹 Стан: handlers.start_handler • 👤 Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.294] 🔹 Стан: database.telethon_auth_db • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.294] 🔹 Стан: database.telethon_auth_db • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.296] 🔹 Стан: handlers.start_handler • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • УВАГА • 2026-04-05 16:52:55.297] ⚠️ Попередження: database.telethon_auth_db • ⚠️ Немає даних для оновлення користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.296] 🔹 Стан: handlers.start_handler • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • УВАГА • 2026-04-05 16:52:55.299] ⚠️ Попередження: database.telethon_auth_db • ⚠️ Немає даних для оновлення користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.300] 🔹 Стан: handlers.start_handler • ✅ Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.301] 🔹 Стан: handlers.start_handler • ✅ Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.303] 🔹 Стан: database.telethon_auth_db • ✅ Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.303] 🔹 Стан: database.telethon_auth_db • ✅ Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.304] 🔹 Стан: handlers.start_handler • 🔐 Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.306] 🔹 Стан: handlers.start_handler • 🔐 Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.309] 🔹 Стан: database.telethon_auth_db • ✅ Спроба авторизації записана: SUCCESS
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.310] 🔹 Стан: database.telethon_auth_db • ✅ Спроба авторизації записана: SUCCESS
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.792] 🔹 Стан: handlers.start_handler • ✅ Обробник /start завершено успішно для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:52:55.798] 🔹 Стан: handlers.start_handler • ✅ Обробник /start завершено успішно для користувача 525974549.
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:58.355] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:58.356] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:52:58.967] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:52:58.968] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:01.931] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:01.931] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.955406 seconds and try again... (tryings = 18, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:02.443] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:02.443] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.076167 seconds and try again... (tryings = 22, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:03.072] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:03.073] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.231437 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:04.490] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:04.491] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.378851 seconds and try again... (tryings = 1, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:07.768] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:07.768] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.121743 seconds and try again... (tryings = 19, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:08.998] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:08.998] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.624892 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:09.956] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:09.956] ⚠️ Попередження: aiogram.dispatcher • Sleep for 1.660289 seconds and try again... (tryings = 2, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:11.761] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:11.762] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.911423 seconds and try again... (tryings = 23, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:16.061] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:16.062] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.164462 seconds and try again... (tryings = 3, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:16.778] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:16.779] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.017414 seconds and try again... (tryings = 20, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:21.386] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:21.386] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.684944 seconds and try again... (tryings = 24, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:22.003] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:22.007] ⚠️ Попередження: aiogram.dispatcher • Sleep for 2.692215 seconds and try again... (tryings = 4, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:26.201] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:26.202] ⚠️ Попередження: aiogram.dispatcher • Sleep for 3.557564 seconds and try again... (tryings = 5, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:27.845] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:27.846] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.918703 seconds and try again... (tryings = 21, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:29.887] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:29.887] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.087869 seconds and try again... (tryings = 25, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:32.972] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:32.973] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.635634 seconds and try again... (tryings = 6, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:37.669] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:37.670] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.032080 seconds and try again... (tryings = 26, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:38.078] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:38.078] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.953058 seconds and try again... (tryings = 22, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:42.810] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:42.810] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.139473 seconds and try again... (tryings = 7, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:46.172] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:46.172] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.051175 seconds and try again... (tryings = 27, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:48.140] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:48.140] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.084367 seconds and try again... (tryings = 23, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:51.390] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:51.390] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.063412 seconds and try again... (tryings = 8, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:56.321] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:56.322] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.981198 seconds and try again... (tryings = 28, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:53:56.629] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:53:56.631] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.962158 seconds and try again... (tryings = 24, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:01.426] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:01.427] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.880115 seconds and try again... (tryings = 9, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:04.704] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:04.704] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.852287 seconds and try again... (tryings = 29, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:06.514] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:06.514] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.091790 seconds and try again... (tryings = 25, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:09.720] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:09.720] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.989063 seconds and try again... (tryings = 10, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:14.739] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:14.742] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.100923 seconds and try again... (tryings = 30, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:14.841] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:14.842] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.986070 seconds and try again... (tryings = 26, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:20.473] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:20.474] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.880265 seconds and try again... (tryings = 11, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:22.903] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:22.904] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.075732 seconds and try again... (tryings = 27, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:25.509] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:25.511] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.190209 seconds and try again... (tryings = 31, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:30.767] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:30.778] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.923616 seconds and try again... (tryings = 28, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:31.033] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:31.040] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.013605 seconds and try again... (tryings = 12, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:35.771] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:35.772] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.076610 seconds and try again... (tryings = 32, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:39.112] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:39.112] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.980417 seconds and try again... (tryings = 29, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:40.905] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:40.905] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.015087 seconds and try again... (tryings = 13, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:44.164] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:44.165] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.078386 seconds and try again... (tryings = 33, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:48.974] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:48.975] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.064116 seconds and try again... (tryings = 30, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:49.302] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:49.303] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.115367 seconds and try again... (tryings = 14, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:54.106] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:54.107] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.980327 seconds and try again... (tryings = 34, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:57.544] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:57.545] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.973424 seconds and try again... (tryings = 31, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:54:59.182] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:54:59.183] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.930752 seconds and try again... (tryings = 15, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:02.662] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:02.663] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.105222 seconds and try again... (tryings = 35, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:07.170] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:07.172] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.935263 seconds and try again... (tryings = 32, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:07.829] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:07.829] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.071699 seconds and try again... (tryings = 16, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:12.596] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:12.596] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.039806 seconds and try again... (tryings = 36, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:16.077] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:16.077] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.993034 seconds and try again... (tryings = 33, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:17.823] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:17.825] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.881733 seconds and try again... (tryings = 17, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:21.306] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:21.307] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.889319 seconds and try again... (tryings = 37, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:25.762] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:25.763] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.076950 seconds and try again... (tryings = 34, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:26.316] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:26.316] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.083443 seconds and try again... (tryings = 18, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:31.028] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:31.029] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.084843 seconds and try again... (tryings = 38, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:34.509] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:34.510] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.977962 seconds and try again... (tryings = 35, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:36.355] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:36.362] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.968606 seconds and try again... (tryings = 19, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:39.608] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:39.609] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.889080 seconds and try again... (tryings = 39, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:44.459] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:44.459] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.096002 seconds and try again... (tryings = 36, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:44.647] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:44.648] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.883071 seconds and try again... (tryings = 20, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:49.664] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:49.665] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.954431 seconds and try again... (tryings = 40, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:52.634] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:52.634] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.156625 seconds and try again... (tryings = 21, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:54.887] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:54.887] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.873677 seconds and try again... (tryings = 37, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:55:57.960] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:55:57.960] ⚠️ Попередження: aiogram.dispatcher • Sleep for 5.053727 seconds and try again... (tryings = 41, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:56:02.992] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:56:02.992] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.964873 seconds and try again... (tryings = 22, bot id = 8157903938)
+[Refridex OS • ПОМИЛКА • 2026-04-05 16:56:03.198] ❌ Помилка: aiogram.dispatcher • Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+[Refridex OS • УВАГА • 2026-04-05 16:56:03.201] ⚠️ Попередження: aiogram.dispatcher • Sleep for 4.881075 seconds and try again... (tryings = 38, bot id = 8157903938)
+[Refridex OS • LOGCORE • 2026-04-05 16:56:15.949] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:15.949] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:56:15.950] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:56:15.950] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:15.951] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:15.998] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.000] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.000] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.000] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.000] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.000] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.001] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.002] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.005] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.005] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.005] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.005] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.005] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.006] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.006] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.523] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.523] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.523] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.525] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.526] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.526] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.530] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.534] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.537] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.539] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.541] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.543] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.545] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.547] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.547] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.547] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.547] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.547] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:56:16.547] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.550] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.550] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.550] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:56:16.550] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • УВАГА • 2026-04-05 16:56:33.900] ⚠️ Попередження: aiogram.dispatcher • Received SIGINT signal
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.901] 🔹 Стан: __main__ • Початок завершення роботи бота. Зареєстровані shutdown-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.901] 🔹 Стан: __main__ • Спроба відключити Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.901] 🔹 Стан: telegram_client_module.telethon_client • Початок відключення всіх Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.902] 🔹 Стан: telegram_client_module.telethon_client • Усі Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.902] 🔹 Стан: __main__ • Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.902] 🔹 Стан: __main__ • Спроба закрити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.910] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.910] 🔹 Стан: __main__ • Пул підключень до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:33.910] 🔹 Стан: __main__ • Закриття сесію бота.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:34.161] 🔹 Стан: __main__ • Сесію бота закрито.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:34.162] 🔹 Стан: __main__ • dp.start_polling завершив роботу.
+[Refridex OS • LOGCORE • 2026-04-05 16:56:34.164] 🔹 Стан: __main__ • Система: процес завершено. Вихід з потоку.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.530] 🔹 Стан: utils.logger • Логування налаштовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.548] 🔹 Стан: __main__ • Ядро ініціалізовано: активація блоку `if __name__ == '__main__'` розпочата...
+[Refridex OS • DEBUG • 2026-04-05 16:59:31.548] 🐞 Відлагодження: asyncio • Using selector: EpollSelector
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.549] 🔹 Стан: __main__ • Початок виконання головної асинхронної функції 'main'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.549] 🔹 Стан: __main__ • Ініціалізація об'єкта Bot.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.581] 🔹 Стан: __main__ • Ініціалізація об'єкта Dispatcher.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.583] 🔹 Стан: __main__ • Реєстрація DbSessionMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.584] 🔹 Стан: middlewares.db_middleware • DbSessionMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.584] 🔹 Стан: __main__ • DbSessionMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.584] 🔹 Стан: __main__ • Ініціалізація глобального TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.584] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager ініціалізовано з API_ID: 20762337
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.585] 🔹 Стан: __main__ • TelethonClientManager додано до dispatcher.workflow_data.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.585] 🔹 Стан: __main__ • Реєстрація TelethonClientMiddleware.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.585] 🔹 Стан: middlewares.telethon_middleware • TelethonClientMiddleware ініціалізовано (без прямого передавання менеджера).
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.585] 🔹 Стан: __main__ • TelethonClientMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.586] 🔹 Стан: __main__ • Реєстрація ExceptionHandlingMiddleware (для централізованої обробки помилок).
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.586] 🔹 Стан: middlewares.exception_middleware • ExceptionHandlingMiddleware ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.586] 🔹 Стан: __main__ • ExceptionHandlingMiddleware зареєстровано глобально.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.586] 🔹 Стан: __main__ • Реєстрація роутера 'start_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.586] 🔹 Стан: __main__ • Реєстрація роутера 'menu_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.594] 🔹 Стан: __main__ • Реєстрація роутера 'catalog_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.595] 🔹 Стан: __main__ • Реєстрація роутерів адмін-панелі.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.595] 🔹 Стан: __main__ • Реєстрація роутера 'db_operations_handler'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.595] 🔹 Стан: __main__ • Реєстрація роутера 'echo_handler' (для невідомих кнопок та повідомлень).
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.596] 🔹 Стан: __main__ • Перед викликом dp.start_polling. Бот чекає на оновлення...
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.597] 🔹 Стан: __main__ • Початок запуску бота. Зареєстровані startup-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:31.597] 🔹 Стан: __main__ • Спроба створити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.134] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.135] 🔹 Стан: __main__ • Пул підключень до бази даних створено успішно.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.135] 🔹 Стан: __main__ • Ініціалізація таблиць бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.158] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.users' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.160] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_sessions' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.164] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'public.telethon_allowed_chats' перевірена/створена.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.222] 🔹 Стан: database.db_pool_manager • ✅ Схема 'telethon_auth' існує. Перевіряємо таблиці...
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.243] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.users' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.247] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.sessions' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.251] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.allowed_chats' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.255] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.user_access_levels' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.259] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.access_level_history' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.263] 🔹 Стан: database.db_pool_manager • ✅ Таблиця 'telethon_auth.auth_log' існує.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.272] 🔹 Стан: database.db_pool_manager • ✅ Ініціалізація таблиць завершена.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.273] 🔹 Стан: __main__ • Таблиці бази даних ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.273] 🔹 Стан: __main__ • Ініціалізація TelethonClientManager.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.273] 🔹 Стан: telegram_client_module.telethon_client • TelethonClientManager отримав пул підключень до БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.274] 🔹 Стан: telegram_client_module.telethon_client • Завантаження всіх сесій Telethon з БД.
+[Refridex OS • DEBUG • 2026-04-05 16:59:32.274] 🐞 Відлагодження: telegram_client_module.telethon_client • Отримання всіх сесій Telethon з БД для перевірки статусу.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.282] 🔹 Стан: telegram_client_module.telethon_client • Завантажено 0 активних Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.283] 🔹 Стан: __main__ • TelethonClientManager ініціалізовано.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.283] 🔹 Стан: __main__ • Telethon клієнти налаштовано та, якщо потрібно, запущені (через initialize()).
+[Refridex OS • LOGCORE • 2026-04-05 16:59:32.284] 🔹 Стан: __main__ • Завершення on_startup.
+[Refridex OS • DEBUG • 2026-04-05 16:59:52.067] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-04-05 16:59:52.068] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-04-05 16:59:52.068] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-04-05 16:59:52.069] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-04-05 16:59:52.069] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.069] 🔹 Стан: handlers.start_handler • 👤 Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.087] 🔹 Стан: database.telethon_auth_db • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.088] 🔹 Стан: handlers.start_handler • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • УВАГА • 2026-04-05 16:59:52.089] ⚠️ Попередження: database.telethon_auth_db • ⚠️ Немає даних для оновлення користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.090] 🔹 Стан: handlers.start_handler • ✅ Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.092] 🔹 Стан: database.telethon_auth_db • ✅ Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.093] 🔹 Стан: handlers.start_handler • 🔐 Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.111] 🔹 Стан: database.telethon_auth_db • ✅ Спроба авторизації записана: SUCCESS
+[Refridex OS • LOGCORE • 2026-04-05 16:59:52.505] 🔹 Стан: handlers.start_handler • ✅ Обробник /start завершено успішно для користувача 525974549.
+[Refridex OS • DEBUG • 2026-04-05 17:00:05.693] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Обробка події типу Update
+[Refridex OS • DEBUG • 2026-04-05 17:00:05.694] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Додано 'db_pool' до 'data'.
+[Refridex OS • DEBUG • 2026-04-05 17:00:05.694] 🐞 Відлагодження: middlewares.db_middleware • DbSessionMiddleware: Подія Update не має прямого 'from_user'. Пропускаємо обробку користувача.
+[Refridex OS • DEBUG • 2026-04-05 17:00:05.694] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Обробка події Update
+[Refridex OS • DEBUG • 2026-04-05 17:00:05.694] 🐞 Відлагодження: middlewares.telethon_middleware • TelethonClientMiddleware: Додано 'telethon_manager' до 'data'.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.694] 🔹 Стан: handlers.start_handler • 👤 Користувач Віталій (ID: 525974549) виконав команду /start.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.696] 🔹 Стан: database.telethon_auth_db • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.697] 🔹 Стан: handlers.start_handler • ✅ Користувач 525974549 знайдений у БД.
+[Refridex OS • УВАГА • 2026-04-05 17:00:05.697] ⚠️ Попередження: database.telethon_auth_db • ⚠️ Немає даних для оновлення користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.698] 🔹 Стан: handlers.start_handler • ✅ Оновлено last_activity для користувача 525974549.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.699] 🔹 Стан: database.telethon_auth_db • ✅ Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.700] 🔹 Стан: handlers.start_handler • 🔐 Рівень доступу користувача 525974549: 0
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.702] 🔹 Стан: database.telethon_auth_db • ✅ Спроба авторизації записана: SUCCESS
+[Refridex OS • LOGCORE • 2026-04-05 17:00:05.895] 🔹 Стан: handlers.start_handler • ✅ Обробник /start завершено успішно для користувача 525974549.
+[Refridex OS • УВАГА • 2026-04-05 17:00:13.967] ⚠️ Попередження: aiogram.dispatcher • Received SIGINT signal
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.968] 🔹 Стан: __main__ • Початок завершення роботи бота. Зареєстровані shutdown-хуки виконуються.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.968] 🔹 Стан: __main__ • Спроба відключити Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.969] 🔹 Стан: telegram_client_module.telethon_client • Початок відключення всіх Telethon клієнтів.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.969] 🔹 Стан: telegram_client_module.telethon_client • Усі Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.969] 🔹 Стан: __main__ • Telethon клієнти відключено.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.970] 🔹 Стан: __main__ • Спроба закрити пул підключень до бази даних.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.978] 🔹 Стан: database.db_pool_manager • ✅ Пул з'єднань до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.978] 🔹 Стан: __main__ • Пул підключень до бази даних закрито.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:13.978] 🔹 Стан: __main__ • Закриття сесію бота.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:14.230] 🔹 Стан: __main__ • Сесію бота закрито.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:14.231] 🔹 Стан: __main__ • dp.start_polling завершив роботу.
+[Refridex OS • LOGCORE • 2026-04-05 17:00:14.233] 🔹 Стан: __main__ • Система: процес завершено. Вихід з потоку.
