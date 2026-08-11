@@ -2,10 +2,12 @@
 
 import os
 from dotenv import load_dotenv
+import logging
 
 # Завантажуємо змінні з файлу .env.
 # Цей виклик є безпечним і завантажить змінні, якщо вони ще не були завантажені.
 load_dotenv()
+logger = logging.getLogger(__name__)
 
 class Config:
     def __init__(self):
@@ -24,7 +26,7 @@ class Config:
             self.api_id = int(os.getenv('API_ID', '0'))
         except ValueError:
             self.api_id = 0 # Встановлюємо 0, якщо не вдалося конвертувати в int
-            print("WARNING: API_ID у файлі .env не є дійсним числом.")
+            logger.warning("API_ID у файлі .env не є дійсним числом.")
 
         self.api_hash = os.getenv('API_HASH')
         self.telegram_phone = os.getenv('TELEGRAM_PHONE')
@@ -38,7 +40,7 @@ class Config:
             self.admin_id = int(os.getenv('ADMIN_ID', '0'))
         except ValueError:
             self.admin_id = 0 # Встановлюємо 0, якщо не вдалося конвертувати в int
-            print("WARNING: ADMIN_ID у файлі .env не є дійсним числом.")
+            logger.warning("ADMIN_ID у файлі .env не є дійсним числом.")
 
 
         # Шляхи до файлів логів
@@ -74,11 +76,12 @@ class Config:
         
         # Admin ID часто є бажаним, але не завжди абсолютно критичним для старту
         if self.admin_id == 0:
-            print("WARNING: ADMIN_ID не встановлено або недійсне (значення 0). Функції адміністратора можуть не працювати.")
+            logger.warning("ADMIN_ID не встановлено або недійсне (значення 0). Функції адміністратора можуть не працювати.")
 
         if missing_vars:
-            print(f"CRITICAL ERROR: Один або декілька необхідних ENVIRONMENTAL variables не завантажені або недійсні: {', '.join(missing_vars)}")
-            print("Перевірте ваш файл .env та переконайтеся, що всі ключі присутні та мають дійсні значення.")
+            error_message = f"Один або декілька необхідних ENVIRONMENTAL variables не завантажені або недійсні: {', '.join(missing_vars)}"
+            logger.critical(error_message)
+            logger.critical("Перевірте ваш файл .env та переконайтеся, що всі ключі присутні та мають дійсні значення.")
             raise EnvironmentError(f"Відсутні або недійсні змінні оточення: {', '.join(missing_vars)}")
 
 # Створюємо єдиний екземпляр класу Config, який буде імпортуватися

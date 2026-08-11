@@ -19,6 +19,10 @@ class CatalogStates(StatesGroup):
     model_selection = State()
     model_info = State()
 
+class OdometerStates(StatesGroup):
+    """Стани для розпізнавання пробігу."""
+    waiting_for_photo = State()
+
 class AdminStates(StatesGroup):
     """FSM-стани для адмін-панелі та її підрозділів."""
     admin_main = State()

@@ -173,12 +173,11 @@ FIND_MESSAGE_TEXT = """
 Скоро тут можна буде шукати довідники, інструкції та іншу корисну інформацію.
 """
 
-def get_access_level_description(access_level: int, access_buttons: list[tuple[int, str]]) -> tuple[str, str]:
+def get_access_level_description(access_level: int) -> tuple[str, str]:
     """
     Повертає назву та опис рівня доступу.
 
     :param access_level: Числовий рівень доступу користувача.
-    :param access_buttons: Список кортежів (рівень, назва) для кнопок рівня доступу.
     :return: Кортеж (назва_рівня: str, опис_рівня: str).
     """
     if access_level == 0:
@@ -200,19 +199,18 @@ def get_random_admin_welcome_message() -> str:
     """
     return random.choice(ADMIN_WELCOME_MESSAGES)
 
-def get_user_details_text(user_info: dict, is_authorized: bool, access_buttons: list[tuple[int, str]]) -> str:
+def get_user_details_text(user_info: dict, is_authorized: bool) -> str:
     """
     Формує текстове повідомлення з детальною інформацією про користувача.
 
     :param user_info: Словник з інформацією про користувача (id, first_name, last_name, username, access_level).
     :param is_authorized: Булеве значення, що вказує, чи авторизований користувач.
-    :param access_buttons: Список кортежів (рівень, назва) для визначення назв рівнів доступу.
     :return: Форматований рядок з інформацією про користувача.
     """
     current_level = user_info.get('access_level', 0)
 
     # Використовуємо існуючу функцію з цього ж файлу
-    access_level_name, _ = get_access_level_description(current_level, access_buttons)
+    access_level_name, _ = get_access_level_description(current_level)
 
     user_info_text = (
         f"<b>🛠️ Інформація про користувача:</b>\n\n"

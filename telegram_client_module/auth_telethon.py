@@ -19,18 +19,9 @@ from database.db_pool_manager import get_db_pool, create_db_pool, close_db_pool,
 
 logger = logging.getLogger(__name__)
 
-try:
-    string_session_source = inspect.getsourcefile(StringSession)
-    print(f"DEBUG: telethon.sessions.StringSession loaded from: {string_session_source}")
-except TypeError:
-    print("DEBUG: Could not determine source file for StringSession (might be built-in or dynamically generated).")
-except Exception as e:
-    print(f"DEBUG: Error getting source for StringSession: {e}")
-
-
 class CustomDBSessionString(StringSession):
     def __init__(self, session_id=None, db_pool_instance=None, api_id=None, api_hash=None):
-        print(f"DEBUG: Initializing CustomDBSessionString for session_id: {session_id}")
+        logger.debug(f"Initializing CustomDBSessionString for session_id: {session_id}")
         super().__init__()
         self.session_id = session_id
         self.db_pool = db_pool_instance
@@ -39,7 +30,7 @@ class CustomDBSessionString(StringSession):
         self._loop = None
 
     async def load(self):
-        print(f"DEBUG: Loading session '{self.session_id}' from DB.")
+        logger.debug(f"Loading session '{self.session_id}' from DB.")
         if not self.db_pool:
             logger.warning("DB pool not set for CustomDBSessionString. Cannot load session.")
             return
@@ -55,14 +46,7 @@ class CustomDBSessionString(StringSession):
             logger.info(f"Сесія '{self.session_id}' не знайдена в БД. Буде створена нова.")
 
     def save(self):
-        print(f"\nDEBUG: Entering CustomDBSessionString.save() for session '{self.session_id}'.")
-        print(f"DEBUG: Type of 'self' is: {type(self)}")
-        print(f"DEBUG: Is 'self' an instance of telethon.sessions.StringSession? {isinstance(self, StringSession)}")
-        # Ці рядки вже неактуальні, але можуть бути залишені для історії дебагу
-        print(f"DEBUG: Attributes of 'self' before get_string() (now calling super().save()): {dir(self)}")
-        print(f"DEBUG: Does 'self' (the instance) have 'get_string' directly? {hasattr(self, 'get_string')}")
-        print(f"DEBUG: Does 'StringSession' (the base class) have 'get_string' directly? {hasattr(StringSession, 'get_string')}")
-
+        logger.debug(f"Entering CustomDBSessionString.save() for session '{self.session_id}'.")
         if not self.db_pool:
             logger.warning("DB pool not set for CustomDBSessionString. Cannot save session.")
             return
@@ -77,11 +61,11 @@ class CustomDBSessionString(StringSession):
         try:
             # ЗМІНЕНО: Викликаємо метод save() базового класу StringSession
             session_string_bytes = super().save().encode('utf-8')
-            print("DEBUG: Successfully called super().save().")
+            logger.debug("Successfully called super().save().")
         except AttributeError as e:
             # Цей блок більше не повинен викликатися, але залишаємо для безпеки
-            print(f"CRITICAL DEBUG: AttributeError caught while calling super().save(): {e}")
-            raise
+            logger.critical(f"AttributeError caught while calling super().save(): {e}", exc_info=True)
+            raise e
 
         if self.api_id is None or self.api_hash is None:
             logger.error(f"Cannot save session '{self.session_id}': API ID or API Hash not set for CustomDBSessionString. Session will not be saved.")

@@ -38,6 +38,7 @@ from handlers.admin.chat_matrix_handlers import router as chat_matrix_router # <
 # <--- ДОДАНО НОВИЙ ІМПОРТ ДЛЯ АБО РЕДАГУВАННЯ ДОДАВАННЯ ДАНИХ ДО БД--->
 from handlers.admin.db_operations import router as db_operations_router 
 # ----------------------------
+from handlers.odometer_handler import router as odometer_router
 # Підключення ехо для обробки некомандних повідомлень
 from handlers.echo_handler import router as echo_router
 
@@ -176,6 +177,10 @@ async def main():
     from handlers.catalog_handler import router as catalog_router
     logger.info("Реєстрація роутера 'catalog_handler'.")
     dp.include_router(catalog_router)
+
+    # ДОДАЄМО РОУТЕР ДЛЯ ПРОБІГУ
+    logger.info("Реєстрація роутера 'odometer_handler'.")
+    dp.include_router(odometer_router)
 
     logger.info("Реєстрація роутерів адмін-панелі.")
     dp.include_router(admin_main_menu_router)
