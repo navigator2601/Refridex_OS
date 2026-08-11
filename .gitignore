@@ -4,8 +4,7 @@
 # Ignore virtual environments
 myenv/
 venv/
-logs/bot.log
-logs/last_login.log
+logs/
 .git
 Google_Drive_API.json
 kondiki_reader.session
