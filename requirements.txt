@@ -4,3 +4,16 @@ aiofiles
 python-dotenv
 telethon
 psycopg2-binary
+# ШІ та Computer Vision
+ultralytics>=8.0.0
+easyocr>=1.7.0
+
+# Обробка зображень та математика
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+
+# Telegram Bot (якщо використовуєте aiogram v3)
+aiogram>=3.0.0
+
+# Візуалізація (потрібно тільки для тестування/графіків)
+matplotlib>=3.7.0
