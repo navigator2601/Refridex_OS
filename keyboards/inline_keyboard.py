@@ -2,6 +2,7 @@
 # Призначення: Функції для створення інлайн-клавіатур.
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 from typing import List, Dict
 
 # Імпортуємо нову функцію
@@ -118,3 +119,19 @@ async def get_back_to_models_keyboard(brand_name: str) -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"⬅️ Назад до моделей {brand_name}", callback_data=callback_data)]
     ]
     return InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
+
+
+def get_odometer_confirmation_keyboard() -> InlineKeyboardMarkup:
+    """
+    Повертає клавіатуру для підтвердження відправки звіту про пробіг.
+    """
+    builder = InlineKeyboardBuilder()
+    builder.row(InlineKeyboardButton(
+        text="✅ Надіслати в чат",
+        callback_data="send_odometer_report"
+    ))
+    builder.row(InlineKeyboardButton(
+        text="❌ Скасувати",
+        callback_data="cancel_odometer_report"
+    ))
+    return builder.as_markup()

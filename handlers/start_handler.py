@@ -23,6 +23,13 @@ from database.telethon_auth_db import (
     log_auth_attempt
 )
 from database.db_pool_manager import get_db_pool
+# --- ІМПОРТ КОНФІГУРАЦІЇ ДЛЯ ПЕРЕВІРКИ ADMIN_ID ---
+from config import config
+# --- НОВІ ІМПОРТИ для виклику головного меню ---
+from handlers.menu_handler import show_main_menu_handler
+from common.states import MenuStates
+from common.messages import get_access_level_description
+# -------------------------------------------
 
 logger = logging.getLogger(__name__)
 
@@ -86,7 +93,10 @@ async def command_start_handler(
                 username=user_username,
                 first_name=user_first_name,
                 last_name=user_last_name,
-                access_level=0,  # GUEST - за умовчанням
+                # --- АВТОМАТИЧНЕ НАДАННЯ ПРАВ АДМІНІСТРАТОРУ ---
+                # Якщо ID користувача збігається з ADMIN_ID, надаємо рівень 10, інакше 0.
+                access_level=10 if user_id == config.admin_id else 0,
+                # ----------------------------------------------------
                 is_authorized=False
             )
             
@@ -111,11 +121,13 @@ async def command_start_handler(
             error_message=None
         )
 
+        access_level_name, _ = get_access_level_description(access_level)
+
         # ===== КРОК 4: Готуємо привітання =====
         greeting_message = (
             f"👋 Привіт, {user_first_name}!\n\n"
             f"Ласкаво просимо до <b>Refridex OS</b> 🎛️\n\n"
-            f"Рівень доступу: <b>{get_access_level_name(access_level)}</b>"
+            f"Рівень доступу: <b>{access_level_name}</b>"
         )
 
         # ===== КРОК 5: Готуємо клавіатуру з Web App =====
@@ -128,31 +140,15 @@ async def command_start_handler(
             reply_markup=keyboard
         )
 
+        # ===== КРОК 7: Встановлюємо стан головного меню та показуємо його =====
+        await state.set_state(MenuStates.main_menu)
+        await show_main_menu_handler(message, bot, db_pool, state)
+
         logger.info(f"✅ Обробник /start завершено успішно для користувача {user_id}.")
 
     except Exception as e:
         logger.error(f"❌ Помилка в обробнику /start для користувача {user_id}: {e}", exc_info=True)
         await message.answer("❌ Виникла помилка. Спробуйте пізніше.")
-
-
-def get_access_level_name(access_level: int) -> str:
-    """
-    Перетворює числовий рівень доступу на читаний вигляд.
-    
-    Args:
-        access_level: 0=GUEST, 1=USER, 2=MODERATOR, 3=ADMIN
-        
-    Returns:
-        Назва рівня доступу
-    """
-    levels = {
-        0: "👤 GUEST (Гість)",
-        1: "👨 USER (Користувач)",
-        2: "👮 MODERATOR (Модератор)",
-        3: "👑 ADMIN (Адміністратор)"
-    }
-    return levels.get(access_level, "❓ НЕВІДОМО")
-
 
 def create_start_keyboard(access_level: int) -> InlineKeyboardMarkup:
     """

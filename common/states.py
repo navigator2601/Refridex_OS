@@ -22,6 +22,7 @@ class CatalogStates(StatesGroup):
 class OdometerStates(StatesGroup):
     """Стани для розпізнавання пробігу."""
     waiting_for_photo = State()
+    waiting_for_confirmation = State()
 
 class AdminStates(StatesGroup):
     """FSM-стани для адмін-панелі та її підрозділів."""

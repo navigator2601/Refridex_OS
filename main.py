@@ -201,6 +201,12 @@ async def main():
     dp.startup.register(on_bot_startup)
     dp.shutdown.register(on_bot_shutdown)
 
+    # --- ВИДАЛЕННЯ WEBHOOK ПЕРЕД ЗАПУСКОМ POLLING ---
+    # Це вирішує проблему "Conflict: can't use getUpdates method while webhook is active"
+    logger.info("Видалення попередньо встановленого webhook...")
+    await bot.delete_webhook(drop_pending_updates=True)
+    logger.info("Webhook успішно видалено. Починаємо polling.")
+
     logger.info("Перед викликом dp.start_polling. Бот чекає на оновлення...")
     try:
         await dp.start_polling(bot)

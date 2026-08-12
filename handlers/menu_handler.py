@@ -14,7 +14,8 @@ import asyncpg
 
 from keyboards.reply_keyboard import get_main_menu_keyboard, get_main_menu_pages_info, get_cancel_keyboard
 from keyboards.admin_keyboard import get_admin_main_keyboard
-from database.users_db import get_user_access_level
+# --- ВИПРАВЛЕНО: Використовуємо єдину функцію з telethon_auth_db ---
+from database.telethon_auth_db import get_user_access_level
 #from database.db_search_functions import find_in_database, format_search_results
 from common.messages import (
     get_access_level_description,
@@ -90,7 +91,7 @@ async def show_main_menu_handler(
     
     menu_message_text = ""
     if is_main_menu_return or is_initial_menu_entry:
-        level_name, level_description = get_access_level_description(access_level, ACCESS_LEVEL_BUTTONS)
+        level_name, level_description = get_access_level_description(access_level)
         menu_message_text = (
             "Ваш рівень доступу:\n"
             f"<b>{level_name}</b>\n"
