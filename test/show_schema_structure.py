@@ -1,4 +1,6 @@
+import os
 import psycopg2
+from config import config
 
 def get_tables(cur, schema):
     cur.execute("""
@@ -73,7 +75,8 @@ def show_schema_structure(cur, schema):
         else:
             print("  (немає)")
 def main():
-    conn = psycopg2.connect("postgresql://kondiki:avrora@localhost:5432/Refridex_os_bot")
+    db_url = getattr(config, 'database_url', None) or os.getenv("DATABASE_URL", "postgresql://kondiki:avrora@localhost:5432/Refridex_os_bot")
+    conn = psycopg2.connect(db_url)
     cur = conn.cursor()
 
     cur.execute("""

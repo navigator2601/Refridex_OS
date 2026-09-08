@@ -1,7 +1,6 @@
 # handlers/admin/main_menu.py
 
 import logging
-import math
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 from aiogram.enums import ParseMode
@@ -9,9 +8,9 @@ from aiogram.filters import StateFilter
 
 import asyncpg
 
-from keyboards.admin_keyboard import get_admin_main_keyboard, get_telethon_actions_keyboard, get_chat_matrix_keyboard
+from keyboards.admin_keyboard import get_admin_main_keyboard, get_chat_matrix_keyboard
 from keyboards.reply_keyboard import get_main_menu_keyboard
-from database.users_db import get_user_access_level
+from database.telethon_auth_db import get_user_access_level
 from common.messages import get_access_level_description, get_random_admin_welcome_message
 from common.constants import ACCESS_LEVEL_BUTTONS
 
@@ -27,8 +26,6 @@ router.callback_query.filter(AdminAccessFilter())
 router.message.filter(AdminAccessFilter())
 
 # Хендлер для повернення в головне адмін-меню
-# Цей хендлер викликається, коли адміністратор натискає "⬅️ Назад до адмін-меню" з підменю
-# Тепер використовуємо ОДИН StateFilter для всіх відповідних станів
 @router.callback_query(
     AdminCallback.filter(F.action == "cancel_admin_action"),
     StateFilter(
@@ -46,9 +43,8 @@ async def back_to_admin_main_menu(
     state: FSMContext
 ) -> None:
     logger.info(f"Користувач {callback.from_user.id} натиснув '⬅️ Назад до адмін-меню'.")
-    await state.set_state(AdminStates.admin_main) # Встановлюємо стан назад до головного адмін-меню
+    await state.set_state(AdminStates.admin_main)
     keyboard = get_admin_main_keyboard()
-    
     welcome_message = get_random_admin_welcome_message()
     
     await callback.message.edit_text(
@@ -58,8 +54,26 @@ async def back_to_admin_main_menu(
     )
     await callback.answer()
 
+# Хендлер для входу в розділ "Чат-матриця"
+@router.callback_query(
+    AdminCallback.filter(F.action == "chat_matrix"),
+    StateFilter(AdminStates.admin_main, AdminStates.chat_matrix_management)
+)
+async def show_chat_matrix_menu(
+    callback: types.CallbackQuery,
+    state: FSMContext
+) -> None:
+    logger.info(f"Користувач {callback.from_user.id} відкрив меню 'Чат-матриця'.")
+    await state.set_state(AdminStates.chat_matrix_management)
+    keyboard = get_chat_matrix_keyboard()
+    await callback.message.edit_text(
+        "<b>💬 Чат-матриця · Перегляд активних зон:</b>\n\nОберіть дію:",
+        reply_markup=keyboard,
+        parse_mode=ParseMode.HTML
+    )
+    await callback.answer()
+
 # Хендлер для кнопки "🏁 Завершити командування"
-# Цей хендлер вже використовує єдиний StateFilter з попередніх виправлень
 @router.callback_query(
     AdminCallback.filter(F.action == "close_admin_panel"),
     StateFilter(
@@ -87,12 +101,10 @@ async def close_admin_panel(
     if access_level is None:
         access_level = 0
     
-    # Після clear() current_state_data буде пустий, тому .get() з дефолтом
     current_state_data = await state.get_data()
     current_page = current_state_data.get("menu_page", 0)
 
     keyboard = await get_main_menu_keyboard(access_level, current_page)
-    
     level_name, level_description = get_access_level_description(access_level, ACCESS_LEVEL_BUTTONS)
 
     await callback.message.delete()
@@ -102,5 +114,3 @@ async def close_admin_panel(
         parse_mode=ParseMode.HTML
     )
     await callback.answer()
-
-# ... (решта коду без змін) ...

@@ -1,13 +1,55 @@
-# Ignore environment variables
+# Environment variables
 .env
+.env.*
 
-# Ignore virtual environments
-myenv/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
 venv/
+.venv/
+myenv/
+env/
+ENV/
+
+# Logs
 logs/
-.git
+*.log
+*.log.*
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Telegram / Telethon sessions
+*.session
+*.session-journal
+
+# Secrets & Credentials
 Google_Drive_API.json
-kondiki_reader.session
+*.pem
+*.key
+
+# Local scripts / dumps
 create_dump.sh
 pushit.sh
-

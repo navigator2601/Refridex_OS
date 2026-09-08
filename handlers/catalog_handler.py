@@ -2,20 +2,16 @@
 # Призначення: Обробка запитів, пов'язаних з каталогом кондиціонерів.
 
 import logging
-from aiogram import Router, F, types
+from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, ReplyKeyboardRemove
 from aiogram.enums.parse_mode import ParseMode
 from asyncpg import Pool
-from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
-import re
 
 from database.db_search_functions import get_all_brands_with_count, get_models_by_brand, get_model_details_by_id
-from database.users_db import get_user_access_level
-from keyboards.inline_keyboard import get_brands_inline_keyboard, get_models_inline_keyboard, get_model_details_menu_keyboard, get_back_to_models_keyboard
+from database.telethon_auth_db import get_user_access_level
+from keyboards.inline_keyboard import get_brands_inline_keyboard, get_models_inline_keyboard, get_model_details_menu_keyboard
 from keyboards.reply_keyboard import get_main_menu_keyboard
 from services.message_formatter import (
-    format_model_details_message,
     format_description,
     format_general_characteristics,
     format_technical_parameters,
@@ -27,12 +23,6 @@ router = Router()
 logger = logging.getLogger(__name__)
 
 CATALOG_ACTIVATED_MESSAGE = "⚡ Каталог активовано! \nКристали даних виявили бренди:"
-
-class ModelDetailsStates(StatesGroup):
-    """
-    Стан для зберігання деталей моделі, щоб уникнути повторних запитів до БД.
-    """
-    viewing_details = State()
 
 @router.message(F.text == "📚 Каталог")
 async def show_catalog_handler_message(message: Message, db_pool: Pool):

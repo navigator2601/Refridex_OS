@@ -193,6 +193,13 @@ class TelethonClientManager:
         """Повертає словник усіх активних клієнтів (номер телефону: клієнт)."""
         return self.clients
 
+    async def get_any_active_client(self) -> Optional[TelegramClient]:
+        """Повертає першого підключеного та авторизованого клієнта."""
+        for client in self.clients.values():
+            if client.is_connected() and await client.is_user_authorized():
+                return client
+        return None
+
     async def _get_client_detailed_info(self, client: TelegramClient, phone_key: str) -> Dict[str, Any]:
         """
         Отримує детальну інформацію про клієнта, включаючи дані користувача з Telegram.

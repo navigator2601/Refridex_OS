@@ -69,22 +69,25 @@ class DbSessionMiddleware(BaseMiddleware):
             return await handler(event, data) # Передаємо data як словник
 
         if user_id:
-            async with db_pool.acquire() as conn:
-                async with conn.transaction():
-                    await conn.execute(
-                        """
-                        INSERT INTO users (id, username, first_name, last_name, last_activity)
-                        VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP)
-                        ON CONFLICT (id) DO UPDATE
-                        SET username = EXCLUDED.username,
-                            first_name = EXCLUDED.first_name,
-                            last_name = EXCLUDED.last_name,
-                            last_activity = CURRENT_TIMESTAMP;
-                        """,
-                        user_id, username, first_name, last_name
-                    )
-                    logger.debug(f"DbSessionMiddleware: Дані користувача {user_id} оновлено/вставлено.")
+            try:
+                async with db_pool.acquire() as conn:
+                    async with conn.transaction():
+                        await conn.execute(
+                            """
+                            INSERT INTO telethon_auth.users (id, username, first_name, last_name, last_activity)
+                            VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP)
+                            ON CONFLICT (id) DO UPDATE
+                            SET username = COALESCE(EXCLUDED.username, telethon_auth.users.username),
+                                first_name = COALESCE(EXCLUDED.first_name, telethon_auth.users.first_name),
+                                last_name = COALESCE(EXCLUDED.last_name, telethon_auth.users.last_name),
+                                last_activity = CURRENT_TIMESTAMP;
+                            """,
+                            user_id, username, first_name, last_name
+                        )
+                        logger.debug(f"DbSessionMiddleware: Дані користувача {user_id} оновлено/вставлено.")
+            except Exception as e:
+                logger.warning(f"DbSessionMiddleware: Не вдалося оновити активність користувача {user_id}: {e}")
 
-            return await handler(event, data) # Передаємо data як словник
+            return await handler(event, data)
         else:
             return await handler(event, data) # Передаємо data як словник

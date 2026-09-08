@@ -4,21 +4,22 @@ from aiogram.filters import Filter
 from aiogram.types import Message
 from typing import Any, Dict, Union
 
-from database.users_db import get_user_access_level # Переконайтеся, що цей імпорт коректний
+from database.telethon_auth_db import get_user_access_level
 
 class AdminAccessFilter(Filter):
     def __init__(self, min_access_level: int = 10):
         self.min_access_level = min_access_level
 
-    async def __call__(self, obj: Union[Message], **data: Any) -> bool:
+    async def __call__(self, obj: Union[Message, Any], **data: Any) -> bool:
         # Перевіряємо, чи це повідомлення або CallbackQuery
-        if isinstance(obj, Message):
+        if isinstance(obj, Message) and obj.from_user:
             user_id = obj.from_user.id
-        elif isinstance(obj, dict) and 'from_user' in obj: # Для випадку, якщо Filter використовується з Callbacks
+        elif isinstance(obj, dict) and 'from_user' in obj:
             user_id = obj['from_user'].id
+        elif hasattr(obj, 'from_user') and obj.from_user:
+            user_id = obj.from_user.id
         else:
-            # Це може бути CallbackQuery або інший тип, спробуємо отримати user_id
-            user_id = obj.from_user.id # Очікуємо, що from_user завжди є
+            return False
 
         # db_pool має бути доступний у `data` завдяки MIDDLEWARE або `dp.workflow_data`
         # Якщо ви ще не налаштували middleware, який передає db_pool,

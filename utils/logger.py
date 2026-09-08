@@ -78,7 +78,7 @@ def setup_logging():
     bot_file_handler.setFormatter(refridex_formatter) # Використовуємо кастомний форматер
     main_logger.addHandler(bot_file_handler)
 
-    # 3. Обробник для запису логів останнього входу Telethon (може бути окремим)
+    # 3. Обробник для запису логів авторизації та сесій
     login_file_handler = TimedRotatingFileHandler(
         config.last_login_log_file,
         when="midnight",
@@ -88,7 +88,10 @@ def setup_logging():
     )
     login_file_handler.setLevel(logging.INFO) # У файл логу входу пишемо від INFO
     login_file_handler.setFormatter(refridex_formatter) # Використовуємо кастомний форматер
-    main_logger.addHandler(login_file_handler)
+    
+    # Прив'язуємо до логерів авторизації, щоб не дублювати всі логи бота
+    for auth_logger_name in ('auth', 'telethon_auth', 'telegram_client_module'):
+        logging.getLogger(auth_logger_name).addHandler(login_file_handler)
 
     # Додаткові налаштування для логування від бібліотек (знижуємо рівень, щоб не було занадто багато шуму)
     logging.getLogger('telethon').setLevel(logging.WARNING)
@@ -97,9 +100,6 @@ def setup_logging():
     logging.getLogger('sqlalchemy.engine').setLevel(logging.WARNING)
     logging.getLogger('sqlalchemy.pool').setLevel(logging.WARNING)
 
-    # Закоментуємо print("Логування налаштовано."), оскільки тепер це буде логуватися
-    # інакше ми побачимо стандартний print перед налаштованим логом.
-    # print("Логування налаштовано.")
     logging.getLogger(__name__).info("Логування налаштовано.") # Використовуємо логер для повідомлення
 
 # Якщо файл запущено напряму, просто налаштовуємо логування
