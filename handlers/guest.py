@@ -5,7 +5,7 @@ from typing import Optional
 from aiogram import Router, F
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from aiogram.types import Message, CallbackQuery, ReplyKeyboardRemove
+from aiogram.types import Message, CallbackQuery
 
 from config import config
 from database.models.user import UserModel, AccessLevel
@@ -16,6 +16,7 @@ from keyboards.reply_keyboard import (
     get_cancel_keyboard,
 )
 from keyboards.inline_keyboard import get_user_approval_keyboard
+from utils.messages import GuestMessages
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +26,6 @@ router = Router(name="guest_router")
 class GuestRegistrationStates(StatesGroup):
     waiting_for_phone = State()
     waiting_for_name = State()
-    waiting_for_call_sign = State()
 
 
 # ---------------------------------------------------------------------------
@@ -37,7 +37,7 @@ async def cancel_registration(message: Message, state: FSMContext, user: Optiona
     await state.clear()
     access_level = user.access_level if user else AccessLevel.GUEST
     await message.answer(
-        "❌ Дію скасовано. Повернення до головного меню.",
+        text=GuestMessages.CANCELLED,
         reply_markup=get_main_reply_keyboard(access_level=access_level),
     )
 
@@ -47,24 +47,18 @@ async def cancel_registration(message: Message, state: FSMContext, user: Optiona
 # ---------------------------------------------------------------------------
 @router.message(F.text == "📝 Подати заявку на реєстрацію")
 async def start_registration(message: Message, state: FSMContext, user: Optional[UserModel]) -> None:
-    """Початок анкети реєстрації для отримання ролі Монтажника."""
-    # Якщо користувач вже авторизований (Монтажник або вище), не починаємо анкету
+    """Початок анкети реєстрації (Крок 1: Номер телефону)."""
     if user and user.access_level >= AccessLevel.USER:
         await message.answer(
-            f"✅ Ви вже авторизовані в системі як <b>{user.access_level.badge}</b>.",
+            text=GuestMessages.already_authorized(user.access_level.badge),
             reply_markup=get_main_reply_keyboard(access_level=user.access_level),
             parse_mode="HTML",
         )
         return
 
     await state.set_state(GuestRegistrationStates.waiting_for_phone)
-    text = (
-        "📝 <b>Реєстрація монтажника (Крок 1 з 3)</b>\n\n"
-        "Будь ласка, надішліть ваш контакт за допомогою кнопки <b>«📱 Поділитися контактом»</b> "
-        "нижче або введіть номер телефону вручну (у форматі <code>+380XXXXXXXXX</code>):"
-    )
     await message.answer(
-        text=text,
+        text=GuestMessages.REG_STEP_PHONE,
         reply_markup=get_contact_request_keyboard(),
         parse_mode="HTML",
     )
@@ -88,8 +82,7 @@ async def process_phone(message: Message, state: FSMContext) -> None:
 
     if not phone:
         await message.answer(
-            "⚠️ Некоректний формат номера телефону.\n"
-            "Скористайтеся кнопкою <b>«📱 Поділитися контактом»</b> або введіть номер у форматі: <code>+380XXXXXXXXX</code>",
+            text=GuestMessages.REG_INVALID_PHONE,
             reply_markup=get_contact_request_keyboard(),
             parse_mode="HTML",
         )
@@ -98,110 +91,62 @@ async def process_phone(message: Message, state: FSMContext) -> None:
     await state.update_data(phone=phone)
     await state.set_state(GuestRegistrationStates.waiting_for_name)
 
-    text = (
-        f"✅ Номер телефону зафіксовано: <code>{phone}</code>\n\n"
-        "👤 <b>Крок 2 з 3: Ваше офіційне ПІБ</b>\n\n"
-        "Введіть ваше Прізвище, Ім'я та По батькові (наприклад: <i>Шевченко Тарас Григорович</i>):"
+    await message.answer(
+        text=GuestMessages.reg_step_name(phone),
+        reply_markup=get_cancel_keyboard(),
+        parse_mode="HTML",
     )
-    await message.answer(text=text, reply_markup=get_cancel_keyboard(), parse_mode="HTML")
 
 
 # ---------------------------------------------------------------------------
-# Крок 2: Обробка ПІБ
+# Крок 2: Обробка імені та завершення реєстрації
 # ---------------------------------------------------------------------------
 @router.message(GuestRegistrationStates.waiting_for_name, F.text)
-async def process_name(message: Message, state: FSMContext) -> None:
-    full_name = message.text.strip()
-    parts = full_name.split()
-
-    if len(parts) < 2 or len(full_name) < 4:
-        await message.answer(
-            "⚠️ Будь ласка, введіть принаймні Прізвище та Ім'я (наприклад: <i>Шевченко Тарас</i>):",
-            reply_markup=get_cancel_keyboard(),
-            parse_mode="HTML",
-        )
-        return
-
-    surname = parts[0]
-    official_name = parts[1]
-    patronymic = parts[2] if len(parts) > 2 else None
-
-    await state.update_data(surname=surname, official_name=official_name, patronymic=patronymic)
-    await state.set_state(GuestRegistrationStates.waiting_for_call_sign)
-
-    text = (
-        f"✅ ПІБ зафіксовано: <b>{surname} {official_name}</b>\n\n"
-        "🏷️ <b>Крок 3 з 3: Робочий позивний</b>\n\n"
-        "Введіть бажаний позивний або номер бригади (наприклад: <code>ІМ-5</code>, <code>БР-2</code>):"
-    )
-    await message.answer(text=text, reply_markup=get_cancel_keyboard(), parse_mode="HTML")
-
-
-# ---------------------------------------------------------------------------
-# Крок 3: Обробка позивного та збереження в БД
-# ---------------------------------------------------------------------------
-@router.message(GuestRegistrationStates.waiting_for_call_sign, F.text)
-async def process_call_sign(
+async def process_name(
     message: Message,
     state: FSMContext,
     auth_repo: Optional[AuthRepository],
 ) -> None:
-    call_sign = message.text.strip().upper()
-    if len(call_sign) < 2 or len(call_sign) > 20:
+    name = message.text.strip()
+
+    if len(name) < 2:
         await message.answer(
-            "⚠️ Позивний повинен містити від 2 до 20 символів (наприклад: <code>ІМ-5</code>):",
+            text=GuestMessages.REG_INVALID_NAME,
             reply_markup=get_cancel_keyboard(),
             parse_mode="HTML",
         )
         return
 
     data = await state.get_data()
-    phone = data.get("phone")
-    surname = data.get("surname")
-    official_name = data.get("official_name")
-    patronymic = data.get("patronymic")
+    phone = data.get("phone", "")
 
-    # Зберігаємо в базі даних
+    # Зберігаємо ім'я та телефон у базі даних (позивний залишається для адміна)
     if auth_repo:
         try:
             await auth_repo.update_profile(
                 user_id=message.from_user.id,
-                call_sign=call_sign,
                 phone=phone,
-                surname=surname,
-                official_name=official_name,
-                patronymic=patronymic,
+                official_name=name,
             )
         except Exception as e:
             logger.error(f"Помилка оновлення профілю користувача {message.from_user.id}: {e}")
 
     await state.clear()
 
-    user_text = (
-        "🎉 <b>Заявку успішно надіслано!</b>\n\n"
-        f"<b>Телефон:</b> <code>{phone}</code>\n"
-        f"<b>ПІБ:</b> {surname} {official_name} {patronymic or ''}\n"
-        f"<b>Позивний:</b> <code>{call_sign}</code>\n\n"
-        "⏳ Вашу анкету передано адміністратору на перевірку. "
-        "Щойно доступ буде підтверджено, ви отримаєте повідомлення, а меню автоматично розшириться.\n\n"
-        "Ви також можете натиснути «🔄 Перевірити статус» у будь-який час."
-    )
+    # Повідомлення користувачу про успішне надсилання заявки
     await message.answer(
-        text=user_text,
+        text=GuestMessages.reg_success_user(phone=phone, name=name),
         reply_markup=get_main_reply_keyboard(access_level=AccessLevel.GUEST),
         parse_mode="HTML",
     )
 
     # Сповіщення адміністратора системи
     if config.admin_id and config.admin_id != message.from_user.id:
-        admin_card = (
-            "🔔 <b>Нова заявка на авторизацію монтажника!</b>\n\n"
-            f"<b>Користувач:</b> @{message.from_user.username or 'немає'}\n"
-            f"<b>Telegram ID:</b> <code>{message.from_user.id}</code>\n"
-            f"<b>ПІБ:</b> {surname} {official_name} {patronymic or ''}\n"
-            f"<b>Телефон:</b> <code>{phone}</code>\n"
-            f"<b>Бажаний позивний:</b> <code>{call_sign}</code>\n\n"
-            "Оберіть дію:"
+        admin_card = GuestMessages.reg_admin_notification(
+            username=message.from_user.username,
+            user_id=message.from_user.id,
+            name=name,
+            phone=phone,
         )
         try:
             await message.bot.send_message(
@@ -212,6 +157,7 @@ async def process_call_sign(
             )
         except Exception as e:
             logger.warning(f"Не вдалося надіслати картку заявки адміну {config.admin_id}: {e}")
+
 
 
 # ---------------------------------------------------------------------------
@@ -235,26 +181,19 @@ async def check_status(
 
     if current_level >= AccessLevel.USER:
         await message.answer(
-            f"🎉 <b>Ваш статус оновлено!</b>\n\n"
-            f"Поточний рівень: <b>{current_level.badge}</b>\n"
-            f"Позивний: <b>{fresh_user.call_sign or 'не призначено'}</b>\n\n"
-            "Робоче меню активовано нижче:",
+            text=GuestMessages.status_approved(current_level.badge, fresh_user.display_name if fresh_user else None),
             reply_markup=get_main_reply_keyboard(access_level=current_level),
             parse_mode="HTML",
         )
-    elif fresh_user and (fresh_user.phone or fresh_user.call_sign):
+    elif fresh_user and (fresh_user.phone or fresh_user.official_name):
         await message.answer(
-            "⏳ <b>Ваша заявка знаходиться на розгляді.</b>\n\n"
-            f"Позивний: <code>{fresh_user.call_sign or 'не вказано'}</code>\n"
-            f"Телефон: <code>{fresh_user.phone or 'не вказано'}</code>\n\n"
-            "Адміністратор ще не підтвердив доступ. Будь ласка, очікуйте.",
+            text=GuestMessages.status_pending(fresh_user.official_name or fresh_user.first_name, fresh_user.phone),
             reply_markup=get_main_reply_keyboard(access_level=AccessLevel.GUEST),
             parse_mode="HTML",
         )
     else:
         await message.answer(
-            "ℹ️ <b>Ви ще не заповнили заявку на реєстрацію.</b>\n\n"
-            "Натисніть <b>«📝 Подати заявку на реєстрацію»</b> нижче, щоб отримати доступ монтажника.",
+            text=GuestMessages.STATUS_NOT_SUBMITTED,
             reply_markup=get_main_reply_keyboard(access_level=AccessLevel.GUEST),
             parse_mode="HTML",
         )
@@ -266,17 +205,7 @@ async def check_status(
 @router.message(F.text == "ℹ️ Довідка та контакти")
 async def guest_help_contacts(message: Message) -> None:
     """Інформація для незареєстрованих користувачів."""
-    text = (
-        "<b>📖 Інформація для гостей Refridex OS</b>\n\n"
-        "Цей бот призначений для оперативного обліку монтажів кондиціонерів, "
-        "розрахунку фреону та формування звітів по торговельних точках.\n\n"
-        "<b>Як отримати доступ монтажника:</b>\n"
-        "1. Натисніть «📝 Подати заявку на реєстрацію».\n"
-        "2. Надішліть номер телефону, ПІБ та бажаний позивний.\n"
-        "3. Після схвалення адміністратором вам відкриється повний робочий функціонал.\n\n"
-        "📞 З екстрених питань звертайтеся до чергового диспетчера."
-    )
-    await message.answer(text=text, parse_mode="HTML")
+    await message.answer(text=GuestMessages.GUEST_HELP_CONTACTS, parse_mode="HTML")
 
 
 # ---------------------------------------------------------------------------
@@ -308,11 +237,9 @@ async def on_user_approve(callback: CallbackQuery, auth_repo: Optional[AuthRepos
             return
 
     # Оновлюємо картку у чаті адміна
+    admin_repr = callback.from_user.username or str(callback.from_user.id)
     await callback.message.edit_text(
-        f"{callback.message.text}\n\n"
-        f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"✅ <b>СХВАЛЕНО!</b> Надано статус: <b>{level_enum.badge}</b>\n"
-        f"Адміністратор: @{callback.from_user.username or callback.from_user.id}",
+        text=GuestMessages.admin_approved_card(callback.message.text or "", level_enum.badge, admin_repr),
         parse_mode="HTML",
     )
     await callback.answer(f"Користувачу призначено {level_enum.title}")
@@ -321,11 +248,7 @@ async def on_user_approve(callback: CallbackQuery, auth_repo: Optional[AuthRepos
     try:
         await callback.bot.send_message(
             chat_id=target_user_id,
-            text=(
-                f"🎉 <b>Вітаємо! Вашу заявку схвалено!</b>\n\n"
-                f"Вам надано доступ: <b>{level_enum.badge}</b>.\n"
-                f"Робоче меню активовано. Ви можете приступати до роботи:"
-            ),
+            text=GuestMessages.user_approved_notify(level_enum.badge),
             reply_markup=get_main_reply_keyboard(access_level=target_level),
             parse_mode="HTML",
         )
@@ -342,11 +265,10 @@ async def on_user_reject(callback: CallbackQuery) -> None:
         return
 
     target_user_id = int(parts[1])
+    admin_repr = callback.from_user.username or str(callback.from_user.id)
 
     await callback.message.edit_text(
-        f"{callback.message.text}\n\n"
-        f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"❌ <b>ВІДХИЛЕНО</b> адміністратором @{callback.from_user.username or callback.from_user.id}",
+        text=GuestMessages.admin_rejected_card(callback.message.text or "", admin_repr),
         parse_mode="HTML",
     )
     await callback.answer("Заявку відхилено")
@@ -355,13 +277,9 @@ async def on_user_reject(callback: CallbackQuery) -> None:
     try:
         await callback.bot.send_message(
             chat_id=target_user_id,
-            text=(
-                "⚠️ <b>Вашу заявку на реєстрацію було відхилено.</b>\n\n"
-                "Зверніться до бригадира або диспетчера для уточнення причини."
-            ),
+            text=GuestMessages.USER_REJECTED_NOTIFY,
             reply_markup=get_main_reply_keyboard(access_level=AccessLevel.GUEST),
             parse_mode="HTML",
         )
     except Exception as e:
         logger.warning(f"Не вдалося сповістити користувача {target_user_id}: {e}")
-

@@ -29,7 +29,7 @@ class AuthRepository:
         Отримує користувача за Telegram ID або реєструє нового гостя (GUEST).
         Якщо це супер-адміністратор (is_superadmin=True), призначає ADMIN (3).
         """
-        default_level = AccessLevel.ADMIN.value if is_superadmin else AccessLevel.GUEST.value
+        default_level = AccessLevel.AWAKENED.value if is_superadmin else AccessLevel.GUEST.value
         is_authorized = True if is_superadmin else False
         can_manage = True if is_superadmin else False
 
@@ -52,7 +52,7 @@ class AuthRepository:
             last_name = COALESCE(EXCLUDED.last_name, telethon_auth.users.last_name),
             last_activity = CURRENT_TIMESTAMP,
             access_level = CASE
-                WHEN $8 = TRUE THEN 3
+                WHEN $8 = TRUE THEN 101
                 ELSE telethon_auth.users.access_level
             END,
             is_authorized = CASE
@@ -114,8 +114,8 @@ class AuthRepository:
         """
         Зміна рівня доступу користувача з фіксацією в таблиці telethon_auth.access_level_history.
         """
-        if not (0 <= new_level <= 3):
-            raise ValueError(f"Недопустимий рівень доступу: {new_level}. Дозволено 0..3.")
+        if not (0 <= new_level <= 101):
+            raise ValueError(f"Недопустимий рівень доступу: {new_level}. Дозволено 0..101.")
 
         async with self.pool.acquire() as conn:
             async with conn.transaction():
@@ -130,9 +130,9 @@ class AuthRepository:
 
                 old_level = old_row["access_level"]
                 is_authorized = (new_level > AccessLevel.GUEST)
-                can_manage_users = (new_level >= AccessLevel.ADMIN)
-                can_manage_chats = (new_level >= AccessLevel.MODERATOR)
-                can_manage_sessions = (new_level >= AccessLevel.ADMIN)
+                can_manage_users = (new_level >= AccessLevel.CORE_ADMIN)
+                can_manage_chats = (new_level >= AccessLevel.PROTOCOL_LEAD)
+                can_manage_sessions = (new_level >= AccessLevel.SYSTEM_ARCHITECT)
 
                 # 2. Оновлюємо користувача
                 await conn.execute(

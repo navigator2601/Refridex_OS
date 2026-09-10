@@ -16,7 +16,7 @@ CREATE TABLE telethon_auth.users (
 	phone varchar(30) NULL, -- Робочий або контактний номер телефону спеціаліста.
 	is_authorized bool DEFAULT false NOT NULL, -- Прапор авторизації: true — користувач пройшов перевірку та допущений до функціоналу.
 	is_active bool DEFAULT true NOT NULL, -- Стан активності: true — діючий обліковий запис, false — заблокований або звільнений.
-	access_level int2 DEFAULT 0 NOT NULL, -- Рівень доступу в системі: 0=GUEST, 1=USER, 2=MODERATOR, 3=ADMIN (CHECK 0..3).
+	access_level int2 DEFAULT 0 NOT NULL, -- Рівень доступу: 0=GUEST, 1=NAVIGATOR, 3=ENGINEER, 6=LEAD, 10=ADMIN, 100=ARCHITECT, 101=AWAKENED.
 	can_manage_sessions bool DEFAULT false NOT NULL, -- Дозвіл на додавання, видалення та скидання робочих Telethon-сесій.
 	can_manage_chats bool DEFAULT false NOT NULL, -- Дозвіл на керування переліком дозволених чатів і каналів (allowed_chats).
 	can_manage_users bool DEFAULT false NOT NULL, -- Дозвіл на зміну рівнів доступу та активацію інших користувачів.
@@ -24,7 +24,7 @@ CREATE TABLE telethon_auth.users (
 	registered_at timestamptz DEFAULT CURRENT_TIMESTAMP NOT NULL, -- Дата та час проходження повної реєстрації користувачем.
 	updated_at timestamptz DEFAULT CURRENT_TIMESTAMP NOT NULL, -- Час останнього оновлення даних користувача (оновлюється тригером).
 	last_activity timestamptz DEFAULT CURRENT_TIMESTAMP NULL, -- Часова мітка останньої взаємодії користувача з ботом або системою.
-	CONSTRAINT chk_users_access_level CHECK (((access_level >= 0) AND (access_level <= 3))),
+	CONSTRAINT chk_users_access_level CHECK (((access_level >= 0) AND (access_level <= 101))),
 	CONSTRAINT users_call_sign_key UNIQUE (call_sign),
 	CONSTRAINT users_pkey PRIMARY KEY (id)
 );
@@ -80,7 +80,7 @@ CREATE TABLE telethon_auth.access_level_history (
 	reason text NULL, -- Текстова причина коригування дозволів (для аудиту безпеки).
 	changed_at timestamptz DEFAULT CURRENT_TIMESTAMP NOT NULL, -- Точний час фіксації зміни рівня доступу.
 	CONSTRAINT access_level_history_pkey PRIMARY KEY (id),
-	CONSTRAINT chk_hist_new_level CHECK (((new_access_level >= 0) AND (new_access_level <= 3))),
+	CONSTRAINT chk_hist_new_level CHECK (((new_access_level >= 0) AND (new_access_level <= 101))),
 	CONSTRAINT fk_access_history_changed_by FOREIGN KEY (changed_by_user_id) REFERENCES telethon_auth.users(id) ON DELETE SET NULL,
 	CONSTRAINT fk_access_history_user_id FOREIGN KEY (user_id) REFERENCES telethon_auth.users(id) ON DELETE CASCADE
 );

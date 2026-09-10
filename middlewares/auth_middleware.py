@@ -61,7 +61,7 @@ class AuthMiddleware(BaseMiddleware):
                     username=event_user.username,
                     first_name=event_user.first_name,
                     last_name=event_user.last_name,
-                    access_level=AccessLevel.ADMIN if is_superadmin else AccessLevel.GUEST,
+                    access_level=AccessLevel.AWAKENED if is_superadmin else AccessLevel.GUEST,
                     is_authorized=is_superadmin,
                     can_manage_sessions=is_superadmin,
                     can_manage_chats=is_superadmin,

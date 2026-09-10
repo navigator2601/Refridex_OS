@@ -13,12 +13,14 @@ BUTTONS_PER_PAGE = 6
 class MenuItem:
     text: str
     min_level: int = AccessLevel.GUEST
-    max_level: int = AccessLevel.ADMIN
+    max_level: int = AccessLevel.AWAKENED
 
 
-# Головний реєстр пунктів меню системи Refridex OS
+# Головний реєстр пунктів меню системи Refridex OS відповідно до ієрархії рівнів доступу
 MENU_ITEMS: List[MenuItem] = [
-    # Рівень 0: Тільки для Гостя (приховані для всіх авторизованих користувачів)
+    # -----------------------------------------------------------------------
+    # Рівень 0: 🔒 Гість [Level 0] (приховані для всіх авторизованих користувачів)
+    # -----------------------------------------------------------------------
     MenuItem(
         text="📝 Подати заявку на реєстрацію",
         min_level=AccessLevel.GUEST,
@@ -35,56 +37,31 @@ MENU_ITEMS: List[MenuItem] = [
         max_level=AccessLevel.GUEST,
     ),
 
-    # Рівень 1+: Монтажник, Бригадир, Адміністратор
-    MenuItem(
-        text="❄️ Введення замірів",
-        min_level=AccessLevel.USER,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="📍 Мої об'єкти (ТТ)",
-        min_level=AccessLevel.USER,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="👤 Мій профіль",
-        min_level=AccessLevel.USER,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="ℹ️ Інструкції та допомога",
-        min_level=AccessLevel.USER,
-        max_level=AccessLevel.ADMIN,
-    ),
+    # -----------------------------------------------------------------------
+    # Рівень 1+: 🧭 Техно-Навігатор [L1]
+    # -----------------------------------------------------------------------
+    MenuItem(text="📚 Каталог", min_level=AccessLevel.TECHNO_NAVIGATOR),
+    MenuItem(text="📖 Довідники", min_level=AccessLevel.TECHNO_NAVIGATOR),
+    MenuItem(text="🕵️ Пошук", min_level=AccessLevel.TECHNO_NAVIGATOR),
+    MenuItem(text="⚠️ Коди помилок", min_level=AccessLevel.TECHNO_NAVIGATOR),
+    MenuItem(text="🛠️ Інструкції", min_level=AccessLevel.TECHNO_NAVIGATOR),
+    MenuItem(text="👤 Мій профіль", min_level=AccessLevel.TECHNO_NAVIGATOR),
 
-    # Рівень 2+: Бригадир / Диспетчер, Адміністратор
-    MenuItem(
-        text="🔍 Пошук по всіх ТТ",
-        min_level=AccessLevel.MODERATOR,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="📊 Звірка та вивантаження",
-        min_level=AccessLevel.MODERATOR,
-        max_level=AccessLevel.ADMIN,
-    ),
+    # -----------------------------------------------------------------------
+    # Рівень 3+: 🔧 Системний Інженер [L3]
+    # -----------------------------------------------------------------------
+    MenuItem(text="📐 Додаткові функції", min_level=AccessLevel.SYSTEM_ENGINEER),
+    MenuItem(text="🅰️ Пошук магазинів", min_level=AccessLevel.SYSTEM_ENGINEER),
+    MenuItem(text="🔄 Отримати список ТТ", min_level=AccessLevel.SYSTEM_ENGINEER),
+    MenuItem(text="📝 Завдання в роботі", min_level=AccessLevel.SYSTEM_ENGINEER),
+    MenuItem(text="🧾 Звіт по роботі", min_level=AccessLevel.SYSTEM_ENGINEER),
+    MenuItem(text="🚗 Пробіг", min_level=AccessLevel.SYSTEM_ENGINEER),
 
-    # Рівень 3: Адміністратор
-    MenuItem(
-        text="⚙️ Адмін-панель",
-        min_level=AccessLevel.ADMIN,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="👥 Керування користувачами",
-        min_level=AccessLevel.ADMIN,
-        max_level=AccessLevel.ADMIN,
-    ),
-    MenuItem(
-        text="🤖 Telethon сесії",
-        min_level=AccessLevel.ADMIN,
-        max_level=AccessLevel.ADMIN,
-    ),
+    # -----------------------------------------------------------------------
+    # Рівень 10+: 🛡️ Адміністратор Ядра [L10], 🧬 [ROOT], 🌀 [L∞]
+    # -----------------------------------------------------------------------
+    MenuItem(text="⚙️ Адміністрування", min_level=AccessLevel.CORE_ADMIN),
+    MenuItem(text="📝 Додати або редагувати дані", min_level=AccessLevel.CORE_ADMIN),
 ]
 
 
@@ -97,7 +74,6 @@ def get_main_reply_keyboard(
     Фабрика динамічної Reply-клавіатури головного меню.
     
     1. Фільтрує кнопки за правилом: `item.min_level <= access_level <= item.max_level`.
-       Завдяки цьому кнопки гостя ніколи не показуються монтажникам чи адмінам.
     2. Якщо кількість кнопок перевищує `buttons_per_page`, застосовує пагінацію.
     """
     allowed_items = [

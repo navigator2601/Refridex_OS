@@ -88,19 +88,23 @@ def get_user_approval_keyboard(user_id: int) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.row(
         InlineKeyboardButton(
-            text="✅ Схвалити (Монтажник)",
+            text="🧭 [L1] Навігатор",
             callback_data=f"user_approve:{user_id}:1",
         ),
         InlineKeyboardButton(
-            text="📋 Схвалити (Бригадир)",
-            callback_data=f"user_approve:{user_id}:2",
+            text="🔧 [L3] Інженер",
+            callback_data=f"user_approve:{user_id}:3",
         ),
     )
     builder.row(
         InlineKeyboardButton(
+            text="📊 [L6] Керівник",
+            callback_data=f"user_approve:{user_id}:6",
+        ),
+        InlineKeyboardButton(
             text="❌ Відхилити",
             callback_data=f"user_reject:{user_id}",
-        )
+        ),
     )
     return builder.as_markup()
 
