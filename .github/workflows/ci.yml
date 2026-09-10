@@ -1,0 +1,42 @@
+name: Refridex OS CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: GitHub Auto-Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Syntax & Compilation Check
+        run: |
+          python -m py_compile $(find . -name "*.py" -not -path "*/.*" -not -path "*venv*")
+
+      - name: Test Project Structure & Imports
+        env:
+          BOT_TOKEN: "1234567890:ABCdefGHIjklMNOpqrsTUVwxyz"
+          ADMIN_ID: 525974549
+          DATABASE_URL: "postgresql://kondiki:avrora@localhost:5432/Refridex_os_bot"
+          API_ID: 20762337
+          API_HASH: "52c00ff1c1e70548ed77934357e30a4f"
+        run: |
+          python -c "import main; print('✅ GitHub Verification Passed!')"
+

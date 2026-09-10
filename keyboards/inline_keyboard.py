@@ -82,3 +82,26 @@ def get_profile_inline_keyboard() -> InlineKeyboardMarkup:
     )
     return builder.as_markup()
 
+
+def get_user_approval_keyboard(user_id: int) -> InlineKeyboardMarkup:
+    """Інлайн-кнопки для швидкого схвалення або відхилення заявки гостя адміністратором."""
+    builder = InlineKeyboardBuilder()
+    builder.row(
+        InlineKeyboardButton(
+            text="✅ Схвалити (Монтажник)",
+            callback_data=f"user_approve:{user_id}:1",
+        ),
+        InlineKeyboardButton(
+            text="📋 Схвалити (Бригадир)",
+            callback_data=f"user_approve:{user_id}:2",
+        ),
+    )
+    builder.row(
+        InlineKeyboardButton(
+            text="❌ Відхилити",
+            callback_data=f"user_reject:{user_id}",
+        )
+    )
+    return builder.as_markup()
+
+

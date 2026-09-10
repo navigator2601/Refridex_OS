@@ -106,17 +106,6 @@ async def handle_my_profile(message: Message, user: Optional[UserModel]) -> None
     )
 
 
-@router.message(F.text == "📋 Заповнити профіль монтажника")
-async def handle_fill_profile(message: Message, user: Optional[UserModel]) -> None:
-    """Запит на заповнення профілю монтажника (ПІБ, телефон, позивний)."""
-    await message.answer(
-        "📝 Для реєстрації в системі та отримання доступу монтажника, будь ласка, "
-        "зверніться до бригадира або надішліть свої дані:\n"
-        "1. ПІБ (Прізвище, Ім'я, По батькові)\n"
-        "2. Номер телефону\n"
-        "3. Бажаний робочий позивний",
-        parse_mode="HTML",
-    )
 
 
 @router.message(F.text.regexp(r"^⬅️ Меню стор\. (\d+)$"))
