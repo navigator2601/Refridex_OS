@@ -1,0 +1,7 @@
+aiogram>=3.0.0
+telethon
+asyncpg
+pydantic>=2.0
+python-dotenv
+aiofiles
+
