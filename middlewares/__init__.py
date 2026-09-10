@@ -1,8 +1,10 @@
 """
 middlewares/ - Проміжне програмне забезпечення (Aiogram Middlewares).
-Містить:
-- db_middleware: прокидання пулу/сесії БД у контекст хендлерів;
-- auth_middleware: RBAC-перевірка рівня доступу користувача;
-- error_middleware: глобальний захист від виняткових ситуацій.
 """
+from .db_middleware import DbSessionMiddleware
+from .auth_middleware import AuthMiddleware
 
+__all__ = [
+    "DbSessionMiddleware",
+    "AuthMiddleware",
+]

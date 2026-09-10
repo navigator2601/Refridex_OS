@@ -1,8 +1,17 @@
+# handlers/__init__.py
 """
 handlers/ - Роутери обробки подій Telegram (Aiogram v3).
-Містить:
-- обробники команд (/start, /help тощо);
-- обробники текстових повідомлень та Reply-кнопок;
-- обробники CallbackQuery від Inline-кнопок.
 """
+from aiogram import Router
 
+from handlers.common import router as common_router
+from handlers.admin import router as admin_router
+from handlers.montage import router as montage_router
+
+# Головний роутер проекту, який об'єднує всі підпорядковані роутери
+main_router = Router(name="main_router")
+main_router.include_router(common_router)
+main_router.include_router(admin_router)
+main_router.include_router(montage_router)
+
+__all__ = ["main_router", "common_router", "admin_router", "montage_router"]
