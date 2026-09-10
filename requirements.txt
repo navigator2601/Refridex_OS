@@ -2,4 +2,3 @@
 aiogram>=3.0.0
 python-dotenv
 aiofiles
-asyncpg>=0.30.0
